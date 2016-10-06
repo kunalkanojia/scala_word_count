@@ -24,7 +24,7 @@ class WordCountWithActorsSpec(_system: ActorSystem) extends TestKit(_system) wit
 
       expectMsgPF(20 seconds) {
         case WordCountSuccess(result) =>
-          result.size mustEqual 20
+          result.size mustEqual 4
           result.get("src/main/resources/File1.txt") mustBe Some(6480000)
 
         case _ => fail
