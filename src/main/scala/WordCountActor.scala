@@ -8,6 +8,7 @@ case class WordCount(fileName: String, count: Int)
 case class StartCounting(docRoot: String, numActors: Int)
 case class WordCountSuccess(result: Map[String, Int])
 
+//TODO
 class WordCountMaster extends Actor {
 
   var files: Seq[String] = Nil
